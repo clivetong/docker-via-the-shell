@@ -10,8 +10,5 @@
     - nsenter (targetting a process)
     - ushare
     - lightweight virtualization
-<<<<<<< HEAD
     
-=======
-    
->>>>>>> 53823c207a68b6be49151bfc26cf0ebcc32d0b3f
+- Set up the namespace to isolate the hello-world application
