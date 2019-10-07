@@ -6,7 +6,7 @@
 
 - [Namespaces](https://www.youtube.com/watch?v=0kJPa-1FuoI)
     - quick introduction to the 7 namespaces
-    - /proc/$$/ns/
+    - /proc/$$/ns/ and readlink
     - nsenter (targeting a process)
     - ushare
     - lightweight virtualization
