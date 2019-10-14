@@ -149,6 +149,25 @@ Add a BRIDGE here
 
 - mount
 
+Overlay
+
+```
+mkdir overlay-play
+cd overlay-play
+mkdir lower
+mkdir upper
+mkdir working
+mkdir union
+sudo mount -t overlay -o lowerdir=lower,upperdir=upper,workdir=working none union
+cat > lower/play1
+^D
+ls union
+cat > union/play3
+^D
+ls -l union
+ls -l upper
+```
+
 - io
 
 * Now we have what we need
