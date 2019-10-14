@@ -62,7 +62,7 @@
   sudo nsenter -a -t ...pid...
 ```
 
-- proc
+- pid
 
 Freeze processes and move cross machine (so need to impersonate PIDs)
 
@@ -74,7 +74,7 @@ Do this inside and outside a container
 ps aux
 ```
 
-- network
+- net
 
 Own ARP and Routing information
 
@@ -168,7 +168,11 @@ ls -l union
 ls -l upper
 ```
 
-- io
+- user
+
+- ipc
+
+- cgroup [Blog post](https://jvns.ca/blog/2016/10/10/what-even-is-a-container/)
 
 * Now we have what we need
   - Set up the namespace to isolate the hello-world application
