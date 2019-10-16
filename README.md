@@ -87,6 +87,8 @@ Mount was the original namespace added, but lets go for something simpler
   - For example the setns syscall: https://github.com/torvalds/linux/blob/master/kernel/nsproxy.c#L233
   - The namespace proxy is associated with the task: https://github.com/torvalds/linux/blob/a2953204b576ea3ba4afd07b917811d50fc49778/include/linux/sched.h#L910
 
+  - add see where this indirection happens: https://github.com/torvalds/linux/search?q=nsproxy&unscoped_q=nsproxy
+
 now we go namespace by namespace to try to show how this all really works
 
 - UTS
