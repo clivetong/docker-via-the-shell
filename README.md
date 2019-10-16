@@ -70,8 +70,22 @@ Process 1 is special in Linux world (init) and hardwired into the OS as the zomb
 
 Do this inside and outside a container
 
+
 ```
-ps aux
+echo $$
+```
+
+The shell inside the container will have PID 1
+
+When running `ps aux` inside a container it will list all processes, since it gathers them from the [/proc](http://man7.org/linux/man-pages/man5/proc.5.html) filesystem
+
+```
+strace ps
+```
+
+Use PID NS in conjunction with MOUNT NS and mount /proc filesystem 
+```
+mount -t proc proc /proc
 ```
 
 - net
