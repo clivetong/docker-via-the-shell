@@ -129,7 +129,7 @@ echo \$\$
 
 The shell inside the container will have PID 1
 
-When running `ps aux` inside a container it will list all processes, since it gathers them from the [/proc](http://man7.org/linux/man-pages/man5/proc.5.html) filesystem
+When running `ps aux` inside a container it will list all processes, since it gathers them from the parent's mounted [/proc](http://man7.org/linux/man-pages/man5/proc.5.html) filesystem
 
 ```
 
@@ -137,8 +137,7 @@ strace ps
 
 ```
 
-Use PID NS in conjunction with MOUNT NS and mount /proc filesystem
-
+Use PID NS in conjunction with MOUNT NS and mount container's /proc filesystem 
 ```
 
 mount -t proc proc /proc
